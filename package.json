@@ -6,20 +6,43 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && pnpm lint"
+    }
   },
   "dependencies": {
+    "next": "13.3.0",
+    "qs": "6.11.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.1"
+  },
+  "devDependencies": {
     "@types/node": "18.15.11",
+    "@types/qs": "6.9.7",
     "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",
+    "@typescript-eslint/eslint-plugin": "5.59.0",
+    "@typescript-eslint/parser": "5.59.0",
     "autoprefixer": "10.4.14",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
-    "next": "13.3.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-config-react": "1.1.7",
+    "eslint-define-config": "^1.18.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "8.0.3",
+    "lint-staged": "13.2.1",
     "postcss": "8.4.22",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "3.3.1",
+    "prettier": "2.8.7",
     "typescript": "5.0.4"
   }
 }
